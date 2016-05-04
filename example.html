@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sound of Random</title>
+  <meta name="author" content="Jan Doleczek" >
+  <meta name="copyright" content="PROMYK Jan Doleczek">
+  <meta name="keywords" content="sound of random, sound, random">
+  <meta name="description" content="Sound of Random">
+  <meta name="ROBOTS" content="INDEX, FOLLOW">
+  <meta property="og:title" content="Sound of Random" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://sor.doleczek.pl/" />
+  <meta property="og:description" content="Sound of Random" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="sor.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('.btn').click(function(){
+        if (SoR.isPlaying())
+        {
+          SoR.stop();
+        }
+        else
+        {
+          SoR.play();
+        }
+
+        $(this).toggleClass('btn-primary btn-success');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Sound of Random</h1>
+      <p>
+        Simple library for playing random melodies on pages.
+        It's very short and doesn't require anything.
+      </p>
+      <p>Homepage: <a href="http://www.sor.doleczek.pl">www.sor.doleczek.pl</a></p>
+    </div>
+
+    <h3>Try it your self</h3>
+
+    <div class="row navbar text-center">
+      <div class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-play"></span> /
+        <span class="glyphicon glyphicon-stop"></span>
+      </div>
+    </div>
+
+    <h3>How to use it</h3>
+
+    <p>Includ library</p>
+
+    <div class="highlight">
+      <pre>  &lt;script src="sor.js"&gt;&lt;/script&gt;</pre>
+    </div>
+
+    <p>Play sound of random with <code>SoR.play()</code>. To stop simply run <code>SoR.stop()</code>.</p>
+
+    <p>To check if sound is currantly playing <code>SoR.isPlaying()</code> might be used.</p>
+
+    <hr/>
+
+    <div class="navbar text-right">
+      <small>
+        <a href="http://promyk.doleczek.pl">&copy; PROMYK 2016</a>
+      </small>
+    </div>
+  </div>
+</body>
+</html>
